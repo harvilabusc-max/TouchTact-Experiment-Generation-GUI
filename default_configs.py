@@ -49,7 +49,7 @@ default_settings = {
         "I can withdraw from the study any time"
     ],
     "Links": [
-        {"nickname": "example_survey", "url": "https://usc.qualtrics.com/jfe/form/SV_41rUA1Ng0oC6Pe6"}
+        {"nickname": "example_survey", "url": "https://usc.qualtrics.com/jfe/form/SV_cLShZfa0Mn9QdtY"}
     ],
     "layout_descriptions": [
         {"image": "Files/Image/Layout0_tap.png", "location_array_available": False, "interaction_type": "tap"},
