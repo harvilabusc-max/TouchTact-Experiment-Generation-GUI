@@ -183,6 +183,22 @@ def load_setting(file_path = None):
         except FileNotFoundError:
             raise FileNotFoundError("Load Setting: {file_path} file does not exist.")
 
+def _deep_merge_dict(default_dict, loaded_dict):
+    """
+    Deep merge two dictionaries, ensuring all keys from default_dict exist in the result.
+    Values from loaded_dict take precedence when they exist.
+    """
+    import copy
+    result = copy.deepcopy(default_dict)
+
+    for key, value in loaded_dict.items():
+        if key in result and isinstance(result[key], dict) and isinstance(value, dict):
+            result[key] = _deep_merge_dict(result[key], value)
+        else:
+            result[key] = value
+
+    return result
+
 def load_case_config(file_path = None):
     """
     Ensures that the default settings and case files exist before loading the settings.
@@ -207,10 +223,8 @@ def load_case_config(file_path = None):
     with open(file_path, 'r') as f:
         try:
             loaded_case = json.load(f)
-            # Merge with default config to ensure all required keys exist
-            merged_case = default_case_config.copy()
-            merged_case.update(loaded_case)
-            return merged_case
+            # Deep merge with default config to ensure all required keys exist
+            return _deep_merge_dict(default_case_config, loaded_case)
         except json.JSONDecodeError:
             raise ValueError("Load Case Config: {file_path} is not a valid JSON file.")
         except FileNotFoundError:
