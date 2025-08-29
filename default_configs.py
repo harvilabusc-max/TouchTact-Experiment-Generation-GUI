@@ -191,7 +191,7 @@ def load_case_config(file_path = None):
 
     Args:
         file_path (str): The path to the case configuration file.
-    
+
     Returns:
         dict: The loaded case configuration.
     """
@@ -206,7 +206,11 @@ def load_case_config(file_path = None):
     # Load the case configuration from the specified file path
     with open(file_path, 'r') as f:
         try:
-            return json.load(f)
+            loaded_case = json.load(f)
+            # Merge with default config to ensure all required keys exist
+            merged_case = default_case_config.copy()
+            merged_case.update(loaded_case)
+            return merged_case
         except json.JSONDecodeError:
             raise ValueError("Load Case Config: {file_path} is not a valid JSON file.")
         except FileNotFoundError:
