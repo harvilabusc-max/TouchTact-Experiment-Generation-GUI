@@ -1,0 +1,102 @@
+{
+    "order_array": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ],
+    "interaction_delay": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "tutorial_text": {
+        "interaction_type": "tap on the button from 1 to 9",
+        "penalty": "incorrect interaction will force you to have a burger",
+        "game_mode": "you will be able to continue from the button you left off if you make a mistake"
+    },
+    "interaction": {
+        "interaction_type": "swipe_through",
+        "game_mode": "restart"
+    },
+    "location_array": [
+        {
+            "x": 10,
+            "y": 10
+        },
+        {
+            "x": 20,
+            "y": 20
+        },
+        {
+            "x": 30,
+            "y": 30
+        },
+        {
+            "x": 40,
+            "y": 40
+        },
+        {
+            "x": 50,
+            "y": 50
+        },
+        {
+            "x": 60,
+            "y": 60
+        },
+        {
+            "x": 70,
+            "y": 70
+        },
+        {
+            "x": 80,
+            "y": 80
+        },
+        {
+            "x": 85,
+            "y": 85
+        }
+    ],
+    "custom_text_array": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+    ],
+    "score": {
+        "reward_score": 100.0,
+        "penalty_percentage": 2,
+        "decimal_places": 0,
+        "display_negative": false
+    },
+    "game_over_text": "Congratulations! You have completed the game!",
+    "linked_files": {
+        "correct_haptic": [
+            "https://harvilabusc-max.github.io/TouchTact-Experiment-Generation-GUI/Files/Haptic/Original/33786__jobro__4-beep-c.ahap",
+            "https://harvilabusc-max.github.io/TouchTact-Experiment-Generation-GUI/Files/Haptic/Original/Dtmf-0.ahap",
+            "https://harvilabusc-max.github.io/TouchTact-Experiment-Generation-GUI/Files/Haptic/Latency/33786__jobro__4-beep-c.ahap",
+            "https://harvilabusc-max.github.io/TouchTact-Experiment-Generation-GUI/Files/Haptic/Original/33786__jobro__4-beep-c.ahap",
+            "https://harvilabusc-max.github.io/TouchTact-Experiment-Generation-GUI/Files/Haptic/Original/33786__jobro__4-beep-c.ahap",
+            "https://harvilabusc-max.github.io/TouchTact-Experiment-Generation-GUI/Files/Haptic/Latency/33786__jobro__4-beep-c.ahap",
+            "https://harvilabusc-max.github.io/TouchTact-Experiment-Generation-GUI/Files/Haptic/Latency/33786__jobro__4-beep-c.ahap",
+            "https://harvilabusc-max.github.io/TouchTact-Experiment-Generation-GUI/Files/Haptic/Latency/Dtmf-0.ahap",
+            "https://harvilabusc-max.github.io/TouchTact-Experiment-Generation-GUI/Files/Haptic/Latency/33786__jobro__4-beep-c.ahap"
+        ]
+    }
+}
